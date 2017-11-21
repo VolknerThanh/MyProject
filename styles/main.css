@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+header{
+	
+}
+main{
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 3% 20px;
+	padding: 10px;
+	width: 1250px;
+	border: 1px solid black;
+}
+/* --- footer --- */
+footer{
+	background-color: black;
+	color: white;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	line-height: 25px;
+	height: 250px;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+}
+footer h3{
+	font-weight: 500;
+}
+#footer-bottom{
+	margin: 10px 0;
+	padding-top: 20px;
+	border-top: 1px solid #282828;
+	position: relative;
+	top: 160px;
+	text-align: center;
+	font-size: 14px;
+}
+#footer-right{
+	position: relative;
+	float: right;
+	clear: right;
+	height: 150px;
+	width: 18%;
+	padding: 20px;
+	border-left: 1px solid #282828;
+}
+#footer-left{
+	position: relative;
+	float: left;
+	clear: left;
+	width: 20%;
+	height: 150px;
+	border-right: 1px solid #282828;
+}
+#footer-center-left{
+	position: absolute;
+	width: 25%;
+	right: 45%;
+	text-align: left;	
+}
+#footer-center-right{
+	position: absolute;
+	width: 25%;
+	left: 55%;
+	text-align: left;	
+}
+.container{
+	position: relative;
+	top: 80px;
+	margin-bottom: 100px;
+}
+/* --- Menu && Submenu --- */
+.menu{
+	width: 100%;
+	position: fixed;
+	height: 60px;
+	text-align: center;
+	background-image: linear-gradient(360deg, white 0%, black 500%);
+	padding: 10px 10px 8px;
+	opacity: 0.9;
+	z-index: 99;
+}
+.menu div {
+	margin-bottom: 10px;
+	right: 20%;
+	position: relative;
+}
+.menu div li {
+	box-sizing: border-box;
+	color: white;
+	list-style-type: none;
+	display: inline-table;
+	padding: 0.5% 2%;
+	font-family: sans-serif;
+}
+.menu div li a{
+	color: black;
+	text-decoration: none;
+	font-size: 150%;
+	font-weight: 500;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+.menu div li:hover{
+	font-size: 120%;
+	color: #232323;
+	text-shadow: 2px 3px 2px gray;
+}
+.submenu{
+	width: 150px;
+	background-color: #d3d3d3;
+	padding-right: 10px;
+}
+.submenu:hover{
+	/*width: 170px;*/
+}
+ul.submenu li{
+	width: 106.5%;
+}
+ul.submenu li a{
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	font-weight: 500;
+	text-shadow: none;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+ul.submenu li a:hover{
+	color: #346f77;
+}
+.menu div li > .submenu{
+	display: none;
+}
+.menu div li:hover > .submenu{
+	display: block;
+	position: absolute;
+}
+/* other menu bar */
+.menubar{
+	position: fixed;
+	left: 3%;
+	z-index: 100;
+	width: 5px;
+}
+.slidemenu{
+	width: 3px;
+	height: 1800px;
+	position: relative;
+	left: 5px;
+	background-color: orange;
+}
+.menuDot{
+	cursor: pointer;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	background-color: orange;
+	display: block;
+}
+/* container */

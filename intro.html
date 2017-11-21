@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Intro</title>
+	<link rel="shortcut icon" href="img/Logo.ico">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/size.css">
+	<link rel="stylesheet" href="styles/images.css">
+	<!-- JQuery -->
+	<script src="lib/jquery-3.2.1.min.js"></script>
+	<script src="lib/script.js"></script>
+	<script src="lib/effects.js" charset="utf-8" async defer></script>
+	<style type="text/css">
+		::-webkit-scrollbar { 
+		    display: none; 
+		}
+	</style>
+</head>
+<body>
+		<div class="menubar">
+			<div class="slidemenu"></div>
+			<a href="#show1"><div class="menuDot" onclick="ThisDot(1);" style="top:10%;"></div></a>
+			<a href="#show2"><div class="menuDot" onclick="ThisDot(2);" style="top:15%;"></div></a>
+			<a href="#show3"><div class="menuDot" onclick="ThisDot(3);" style="top:20%;"></div></a>
+			<a href="#show4"><div class="menuDot" onclick="ThisDot(4);" style="top:25%;"></div></a>
+		</div>
+
+		
+		<div class="centerize">
+			<div id="show1" class="imageSlideShow">
+				<div class="image">
+					<img src="img/2.png" alt="day">
+				</div>
+				<div class="image">
+					<img src="img/3.png" alt="afternoon">
+				</div>
+				<div class="image">
+					<img src="img/4.png" alt="late-afternoon">
+				</div>
+				<div class="image">
+					<img src="img/1.png" alt="night">
+				</div>
+
+				<div class="pre" onclick="nextSlide(-1);">&#10094;</div>
+				<div class="next" onclick="nextSlide(1);">&#10095;</div>
+
+				<div class="imageDot-container">
+					<div class="imageDot" onclick="currentSlide(1);"></div>
+					<div class="imageDot" onclick="currentSlide(2);"></div>
+					<div class="imageDot" onclick="currentSlide(3);"></div>
+					<div class="imageDot" onclick="currentSlide(4);"></div>
+				</div>
+			</div>
+		</div>
+		<div id="show2" class="imageCol">
+			<div id="1" class="image1"></div>
+			<div id="2" class="image2"></div>
+			<div id="3" class="image3"></div>
+			<div id="4" class="image4"></div>
+		</div>
+		<div id="titleOfGallery">
+			<span>Some new products</span>
+		</div>
+		<div id="show3" class="Gallery">
+			<div class="imageGallery imageGallery1">
+				<p data-hover-name="abc"><img src="img/3.png"></p>
+			</div>
+			<div class="imageGallery imageGallery2">
+				<p data-hover-name="abc"><img src="img/4.png"></p>
+			</div>
+			<div class="imageGallery imageGallery3">
+				<p data-hover-name="abc"><img src="img/1.png"></p>
+			</div>
+		</div>
+
+		
+
+
+	<div id="show4" class="TheWrapper">
+			<div id="imageWrapper1"></div>
+			<div id="imageWrapper2"></div>
+
+		</div>
+</body>
+</html>
