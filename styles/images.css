@@ -186,28 +186,29 @@
 	height: 100%;
 }
 .imageGallery:hover img{
-	opacity: 0.7;
+	opacity: 0.4;
 	-webkit-transition: 0.6s ease-in;
 }
 .imageGallery:hover:after{
 	position: absolute;
-	font-size: 20px;
-	color: black;
+	font-size: 50px;
+	font-weight: 500;
+	color: white;
 }
 .imageGallery1:hover:after{
-	content: "hello world I am the owner of this web";
-	top : 50%;
-	left: 15%;
+	content: "New Nike";
+	top : 31%;
+	left: 26%;
 }
 .imageGallery2:hover:after{
-	content: "abc";
-	top : 50%;
-	left: 45%;
+	content: "New Converse";
+	top : 30%;
+	left: 20%;
 }
 .imageGallery3:hover:after{
-	content: "xyz";
-	top : 50%;
-	left: 45%;
+	content: "New Adidas";
+	top : 30%;
+	left: 20%;
 }
 /* --- image wrapper --- */
 .TheWrapper{
@@ -228,4 +229,27 @@
 #imageWrapper2{
 	background-image: url('../img/background/shoes-1.jpg');
 	width: 100%;
+}
+.aboutTheWrapper{
+	position: absolute;
+	top: 40%;
+	left: 14%;
+	width: 300px;
+	font-weight: 600;
+	z-index: 100;
+	color: white;
+}
+.aboutTheWrapper h4{
+	color:black;
+	font-weight: 500;
+	font-size: 200%;
+}
+.aboutTheWrapper h1{
+	font-weight: 500;
+	font-size: 350%;	
+	margin: -10px 0 30px;
+}
+.aboutTheWrapper p{
+	text-align: justify;
+	font-size: 120%;
 }
