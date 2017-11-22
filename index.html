@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Your Shoes</title>
+	<title>Your Shoes || DiscoverYourself</title>
 	<link rel="shortcut icon" href="img/Logo.ico">
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -16,99 +16,98 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/size.css">
 	<link rel="stylesheet" href="styles/images.css">
-	
 	<!-- JQuery -->
 	<script src="lib/jquery-3.2.1.min.js"></script>
-	<script src="lib/script.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="lib/script.js"></script>
+	<script src="lib/effects.js" charset="utf-8" async defer></script>
+	<style type="text/css">
+		::-webkit-scrollbar { 
+		    display: none; 
+		}
+	</style>
 </head>
 <body>
-	
-	<menu type="context toolbar" class="menu">
-		<div>
-			<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Profile</a></li>
-			<li><a href="#">Product</a>
-				<ul class="submenu">
-					<li><a href="#">New</a></li>
-					<li><a href="#">Sale-off</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Women</a>
-				<ul class="submenu">
-					<li><a href="#">Nike</a></li>
-					<li><a href="#">Convert</a></li>
-					<li><a href="#">Adidas</a></li>
-					<li><a href="#">Hunter</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Men</a>
-				<ul class="submenu">
-					<li><a href="#">Nike</a></li>
-					<li><a href="#">Convert</a></li>
-					<li><a href="#">Adidas</a></li>
-					<li><a href="#">Hunter</a></li>
-				</ul>
-			</li>
+		<div class="hiddenmenu">
+			<div>
+				<a href="shopping.html" title="google">Shopping</a>
+			</div>
+			<div>
+				<a href="https://www.facebook.com" title="facebook">Facebook</a>
+			</div>
+			<div>
+				<a href="https://www.Instagram.com" title="Instagram">Instagram</a>
+			</div>
 		</div>
-	</menu>
-	
-	<div class='container'>
-		
-
-		<main>
-			<p>first para</p><br>
-			
-			<p class="fontsforweb_fontid_423">hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>hello</p><br>
-			<p>last para</p><br>
-		</main>
-	
-		
-	</div>
-	<footer id="footer">
-		
-		<div id="footer-left">
-			<img src="img/Logo.jpg" style="width: 70%;" alt="logo">
-		</div>
-		<div id="footer-center-left">
-			<h3 style="color: #23474c;"><span class="fa fa-info-circle"></span> Helpful information:</h3>
-			<a href="size.html">Check foot size</a><br>
-			<a href="#">Check guarantee</a><br>
-			<a href="#">Exchange Rules</a><br>
-			<a href="#">Ohter shops</a>
-		</div>
-		<div id="footer-center-right">
-			<h3 style="color: #23474c;"><span class="fa fa-phone-square"></span> Contact</h3>
-			<span>0120 890 4612</span><br>
-			<span>0120 756 4769</span><br>
-		</div>
-		<div id="footer-right">
-			<h2 style="font-weight: 600;">Follow us</h2>
-			<br>
-			<a href="https://www.facebook.com/GoldenSunny.vn/" target="_blank"><span style="font-size:25px; padding-right: 10px;" class="fa fa-facebook-square"></span></a>
-			<a href="https://twitter.com/Volkner7" target="_blank"><span style="font-size:25px; padding-right: 10px;" class="fa fa-twitter-square"></span></a>
-			<a href="https://www.instagram.com/rainsilver_/" target="_blank"><span style="font-size:25px; padding-right: 10px;" class="fa fa-instagram"></span></a>
-			<a href="https://www.youtube.com/channel/UCrp73TyEUkP7BUQsbcTkorw" target="_blank"><span style="font-size:25px; padding-right: 10px;" class="fa fa-youtube-square"></span></a>
+		<div class="menuIcon" onclick="changeShapeOfThis(this)">
+			<div class="barCircle"></div>
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
 		</div>
 
-		<p id="footer-bottom">&copy; copyright 2017 YourShoes. All Rights Reserved</p>
-	</footer>
 
+		<div class="menubar">
+			<div class="slidemenu"></div>
+			<a href="#show1"><div class="menuDot" onclick="ThisDot(1);" style="top:24%;"></div></a>
+			<a href="#show2"><div class="menuDot" onclick="ThisDot(2);" style="top:32%;"></div></a>
+			<a href="#show3"><div class="menuDot" onclick="ThisDot(3);" style="top:40%;"></div></a>
+			<a href="#show4"><div class="menuDot" onclick="ThisDot(4);" style="top:48%;"></div></a>
+		</div>
+
+		<div class="centerize">
+			<div id="show1" class="imageSlideShow">
+				<div class="image">
+					<img src="img/background/Adidas-1.jpg">
+				</div>
+				<div class="image">
+					<img src="img/background/Adidas-2.jpg">
+				</div>
+				<div class="image">
+					<img src="img/background/Neaker-3.jpg">
+				</div>
+				<div class="image">
+					<img src="img/background/Nike-1.jpg">
+				</div>
+
+				<div class="pre" onclick="nextSlide(-1);">&#10094;</div>
+				<div class="next" onclick="nextSlide(1);">&#10095;</div>
+
+				<div class="imageDot-container">
+					<div class="imageDot" onclick="currentSlide(1);"></div>
+					<div class="imageDot" onclick="currentSlide(2);"></div>
+					<div class="imageDot" onclick="currentSlide(3);"></div>
+					<div class="imageDot" onclick="currentSlide(4);"></div>
+				</div>
+			</div>
+		</div>
+		<div id="show2" class="imageCol">
+			<div id="1" class="image1"></div>
+			<div id="2" class="image2"></div>
+			<div id="3" class="image3"></div>
+			<div id="4" class="image4"></div>
+		</div>
+		<div id="titleOfGallery">
+			<span>Some new products</span>
+		</div>
+		<div id="show3" class="Gallery">
+			<div class="imageGallery imageGallery1">
+				<p data-hover-name="abc"><img src="img/Nike/Nike-7.1.jpg"></p>
+			</div>
+			<div class="imageGallery imageGallery2">
+				<p data-hover-name="abc"><img src="img/Converse/Converse-8.jpg"></p>
+			</div>
+			<div class="imageGallery imageGallery3">
+				<p data-hover-name="abc"><img src="img/Adidas/Adidas-6.1.jpg"></p>
+			</div>
+		</div>
+
+		
+
+
+	<div id="show4" class="TheWrapper">
+			<div id="imageWrapper1"></div>
+			<div id="imageWrapper2"></div>
+
+		</div>
 </body>
 </html>

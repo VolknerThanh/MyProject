@@ -1,5 +1,6 @@
 .bgimg1{
 	background-image: url("../img/background.jpg");
+	height: 550px;
 }
 .bgimg2{
 	background-image: url('../img/4.png');
@@ -15,7 +16,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 1;
-	opacity:0.75;
+	opacity:0.9;
 }
 .animate-opacity{
 	-webkit-animation:opac 0.8s;animation:opac 0.8s;
@@ -39,7 +40,7 @@
 	z-index: 20;
 }
 .display-middle-1{
-	top:80%; 
+	top:50%; 
 }
 .display-middle-2{
 	top: 260%;
@@ -58,6 +59,7 @@
 .imageSlideShow{
 	position: relative;
 	width: 90%;
+	max-height: 750px;
 }
 .image img{
 	width: 100%;
@@ -128,23 +130,24 @@
 	height: 1080px;
 }
 .image1{
-	background-image: url("../img/2.png");
+	background-image: url("../img/background/vintas.jpg");
+	background-position: 30%;
 	z-index: 1;
 }
 .image2{
-	background-image: url('../img/3.png');
+	background-image: url('../img/background/urbas.jpg');
+	background-position: 45%;
 	z-index: 2;
-	background-position: 25%;
 }
 .image3{
-	background-image: url('../img/4.png');
+	background-image: url('../img/background/babas.jpg');
 	z-index: 3;
-	background-position: 70%;
+	background-position: 40%;
 }
 .image4{
-	background-image: url('../img/1.png');
+	background-image: url('../img/background/Creas.jpg');
 	z-index: 4;
-	background-position: 80%;
+	background-position: 40%;
 }
 
 
@@ -177,6 +180,7 @@
 	position: relative;
 }
 .imageGallery img{
+	max-height: 260px;
 	position: relative;
 	width: 90%;
 	height: 100%;
@@ -214,14 +218,14 @@
 #imageWrapper1, #imageWrapper2{
 	position: absolute;
 	background-repeat: no-repeat;
-	height: 850px;
+	height: 1000px;
+	width: 80%;
 }
 #imageWrapper1{
-	background-image: url('../img/3.png');
+	background-image: url('../img/background/shoes-2.jpg');
 	z-index: 2;
 }
 #imageWrapper2{
-	background-image: url('../img/1.png');
+	background-image: url('../img/background/shoes-1.jpg');
 	width: 100%;
-	background-position: 100% 0%;
 }

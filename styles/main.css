@@ -142,24 +142,91 @@ ul.submenu li a:hover{
 /* other menu bar */
 .menubar{
 	position: fixed;
-	left: 3%;
-	z-index: 100;
+	left: 1%;
+	z-index: 98;
 	width: 5px;
+	height: 900px;
 }
 .slidemenu{
-	width: 3px;
+	width: 2px;
 	height: 1800px;
 	position: relative;
 	left: 5px;
-	background-color: orange;
+	background-color: #ddd;
 }
 .menuDot{
 	cursor: pointer;
 	border-radius: 50%;
-	height: 15px;
-	width: 15px;
+	height: 12px;
+	width: 12px;
 	position: absolute;
-	background-color: orange;
+	border: 2px solid orange;
 	display: block;
 }
-/* container */
+
+/* --- little menu --- */
+.menuIcon{
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 6%;
+    left: 3%;
+    z-index: 100;
+}
+.barCircle{
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border: 1px solid black;
+	position: fixed;
+    top: 5.7%;
+    left: 2.6%;
+}
+.bar1, .bar2, .bar3{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.change{
+    margin: 6px 0;
+}
+.change .bar1{
+	width: 19px;
+    -webkit-transform: rotate(-45deg) translate(1px, 5px);
+    /*transform: rotate(-45deg) translate(-9px, 6px) ;*/
+}
+.change .bar2{
+	opacity: 0;
+}
+.change .bar3{
+	width: 19px;
+    -webkit-transform: rotate(45deg) translate(-5px, -11px) ;
+    /*transform: rotate(45deg) translate(-8px, -8px) ;*/
+}
+
+.hiddenmenu{
+	background-color: orange;
+	width: 250px;
+	height: 1800px;
+	position: fixed;
+	z-index: 99;
+	display: none;
+	padding: 10% 40px 0 0;
+	text-align: right;
+	opacity: 0.9;
+}
+.hiddenmenu a{
+	font-family: sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	line-height: 50px;
+	top: 3px;
+}
+.hiddenmenu a:hover{
+	font-size: 180%;
+}
