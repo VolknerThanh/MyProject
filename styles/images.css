@@ -152,14 +152,6 @@
 
 
 /* --- Gallery Image --- */
-.Gallery{
-	position: relative;
-	box-sizing: border-box;
-	margin-top:3%;
-	text-align: center;
-	background-color: #125b63;
-	padding: 70px 0;
-}
 #titleOfGallery{
 	margin-top: 3%;
 	display: flex;
@@ -172,6 +164,14 @@
 	font-size: 40px;
 	padding: 10px 20px;
 	font-family: serif;
+}
+.Gallery{
+	position: relative;
+	box-sizing: border-box;
+	margin-top:3%;
+	text-align: center;
+	background-color: #125b63;
+	padding: 70px 0;
 }
 .imageGallery{
 	font-family: sans-serif;
