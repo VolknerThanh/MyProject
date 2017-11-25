@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,20 +20,26 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/size.css">
 	<link rel="stylesheet" href="styles/images.css">
+	<link rel="stylesheet" href="styles/animate.css" >
 	<!-- JQuery -->
 	<script src="lib/jquery-3.2.1.min.js"></script>
 	<script src="lib/script.js"></script>
 	<script src="lib/effects.js" charset="utf-8" async defer></script>
+	
 	<style type="text/css">
 		::-webkit-scrollbar { 
 		    display: none; 
 		}
 	</style>
+	<script src="lib/wow.min.js"></script>
+	<script>
+		new WOW().init();
+    </script>
 </head>
 <body>
 		<div class="hiddenmenu">
 			<div>
-				<a href="shopping.html" title="google">Shopping</a>
+				<a href="shopping.html" title="Homepage">Homepage</a>
 			</div>
 			<div>
 				<a href="https://www.facebook.com" title="facebook">Facebook</a>
@@ -38,6 +48,7 @@
 				<a href="https://www.Instagram.com" title="Instagram">Instagram</a>
 			</div>
 		</div>
+
 
 		<div class="menuIcon" onclick="changeShapeOfThis(this)">
 			<div class="barCircle"></div>
@@ -54,6 +65,7 @@
 			<a href="#show3"><div class="menuDot" onclick="ThisDot(3);" style="top:40%;"></div></a>
 			<a href="#show4"><div class="menuDot" onclick="ThisDot(4);" style="top:48%;"></div></a>
 		</div>
+
 
 		<div class="centerize">
 			<div id="show1" class="imageSlideShow">
@@ -80,6 +92,10 @@
 					<div class="imageDot" onclick="currentSlide(4);"></div>
 				</div>
 			</div>
+			<div class="Index-Title wow bounceInUp">
+				<h1>YOUR SHOES || YOUR CHOICE</h1>
+				<h2>Discover Your Favor</h2>
+			</div>
 		</div>
 		<div id="show2" class="imageCol">
 			<div id="1" class="image1"></div>
@@ -87,9 +103,11 @@
 			<div id="3" class="image3"></div>
 			<div id="4" class="image4"></div>
 		</div>
-		<div id="titleOfGallery">
-			<span>Some new products</span>
+
+		<div id="titleOfGallery" class="wow bounceInLeft">
+			<h2>Tunning New</h2>
 		</div>
+
 		<div id="show3" class="Gallery">
 			<div class="imageGallery imageGallery1">
 				<p data-hover-name="abc"><img src="img/Nike/Nike-7.1.jpg"></p>
@@ -102,14 +120,15 @@
 			</div>
 		</div>
 
+
 		
 		<div id="show4" class="TheWrapper">
 			<div id="imageWrapper1"></div>
 			<div id="imageWrapper2">
 				<div class="aboutTheWrapper">
-					<h4>Sản phẩm</h4>
-					<h1>Your Shoes</h1>
-					<p>Nơi bạn có thể khám phá niềm đam mê của chính mình. YourShoes đem đến các loại giày chất lượng của các hãng nổi tiếng trên thế giới.</p>
+					<h4 class="wow bounceInRight">Sản phẩm</h4>
+					<h1 class="wow bounceInRight">Your Shoes</h1>
+					<p class="wow bounceInLeft">Nơi bạn có thể khám phá niềm đam mê của chính mình. YourShoes đem đến các loại giày chất lượng của các hãng nổi tiếng trên thế giới.</p>
 				</div>
 			</div>
 		</div>

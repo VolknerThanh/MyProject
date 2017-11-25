@@ -43,8 +43,8 @@ header("Pragma: no-cache");
 			<li><a href="#">Profile</a></li>
 			<li><a href="#">Product</a>
 				<ul class="submenu">
-					<li><a href="#">New</a></li>
-					<li><a href="#">Sale-off</a></li>
+					<li><a href="NewProducts.php">New</a></li>
+					<li><a href="Sale.php">Sale-off</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Women</a>
@@ -53,7 +53,7 @@ header("Pragma: no-cache");
 					<li><a href="Shoes_Converse.php">Converse</a></li>
 					<li><a href="Shoes_Adidas.php">Adidas</a></li>
 					<li><a href="Shoes_Ananas.php">Ananas</a></li>
-					<li><a href="#">Hunter</a></li>
+					<li><a href="Shoes_Hunter_Female.php">Hunter</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Men</a>
@@ -62,7 +62,7 @@ header("Pragma: no-cache");
 					<li><a href="Shoes_Converse.php">Converse</a></li>
 					<li><a href="Shoes_Adidas.php">Adidas</a></li>
 					<li><a href="Shoes_Ananas.php">Ananas</a></li>
-					<li><a href="#">Hunter</a></li>
+					<li><a href="Shoes_Hunter_Male.php">Hunter</a></li>
 				</ul>
 			</li>
 		</div>
@@ -84,7 +84,7 @@ header("Pragma: no-cache");
 
 			<div class="productList">
 				<?php 
-					include ("database.php");
+					include ("database/database.php");
 					$nike = getNike();
 					$index = 0;
 					$tag = "";

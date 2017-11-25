@@ -27,6 +27,7 @@ header("Pragma: no-cache");
 	<!-- CSS -->
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/size.css">
 	<link rel="stylesheet" href="styles/images.css">
 	
 	<!-- JQuery -->
@@ -34,7 +35,7 @@ header("Pragma: no-cache");
 	<script src="lib/script.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
-
+	
 	<menu type="context toolbar" class="menu">
 		<div>
 			<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
@@ -67,127 +68,62 @@ header("Pragma: no-cache");
 		</div>
 	</menu>
 
-	<?php			
+	<div class='container'>
 
-		if($_GET['requiredDB']!="all"){
-			include ("database/database.php");
-			$nike = getNike();
-			$adidas = getAdidas();
-			$converse = getConverse();
-			$ananas = getAnanas();
-			$hunter = getHunterMale();
-			$hunterF = getHunterFemale();
+		<main>
 
-			$index = $_GET['id'];
-			$tag = $_GET['name'];
-			if($tag == "nike")
-				$product = $nike[$index];
-			else if($tag == "adidas")
-				$product = $adidas[$index];
-			elseif ($tag == "converse")
-				$product = $converse[$index];
-			elseif ($tag == "ananas")
-				$product = $ananas[$index];
-			elseif ($tag == "hunter-female")
-				$product = $hunterF[$index];
-			elseif ($tag == "hunter-male")
-				$product = $hunter[$index];
-		}
-		else
-		{
-			include ("database/allshoesDB.php");
-			$allshoes = getAllShoes();
-			$index = $_GET['id'];
-			$newprice = $_GET['newprice'];
-			$product = $allshoes[$index];
-			$product['price'] = $newprice;
-		}
-	?>
+			<header>
+				<h1>Hunter</h1>
+			</header>
 
-	<main>
-		<div class="PaymentContainer">
-			<table class="productShowTable">
-				<caption>Your Product</caption>
-				<tbody>
-					<tr>
-						<td>
-							<img src='<?php echo $product["img"]?>' alt="<?php echo $product["name"]?>">
-						</td>
-						<td bgcolor="#ddd">
 
-							<p id="titleOfproduct"><?php echo $product['name']?></p>
-							<?php
-								if($_GET['site'] == "sale") {
-							?>
-								<span style="text-decoration: line-through;">
-									Price : <?php echo $product['cost']?> $
-								</span>
-								<br>
-								<span>
-									Price :
-									<?php
-										echo number_format($product['price']);
-									?>
-									$
-								</span>
+
+			<!-- Product list -->
+			
+
+
+			<div class="productList">
+				<?php 
+					include ("database/database.php");
+					$hunterF = getHunterFemale();
+					$index = 0;
+					$tag = "";
+					foreach ($hunterF as$value) {
+				?>
+				<div class="product">
+					<img src='<?php echo $value["img"]?>' alt="<?php echo $value["name"]?>">
+					<div class="productInfo">
+						<div class="productTitle">
+							<h3><?php echo $value["name"]?></h3>
 							<?php 
-								}
-								else
-								{
+								if($value["status"] == "new"){ 
 							?>
-								<span>
-									Price : <?php echo $product['cost']?> $
-								</span>
-							<?php
+								<h4><?php echo $value["status"];?></h4>
+							<?php	
 								}
 							?>
-							<br>
-							Shoes type : 
-							<a href="Shoes_Nike.php" style="text-decoration: none;">
-								<span class="Tagbar">
-									<?php echo $product['tag'] ?>
-								</span>
-							</a>
+						</div>
+						<p><?php echo $value["cost"]?> $</p>
+						<?php
+							$tag = $value["tag"];
+						?>
+						<a class="JumpToPage" href="getInfo.php?id=<?php echo $index?>&name=<?php echo $tag?>">
+							<div class="BuyIt" onclick="Payment(this);">Buy now</div>
+						</a>
+					</div>
+				</div>
+				<br>
+				<?php
+					$index += 1;
+					}
+				?>
+			</div>
 
 
-							<form>
-								<label style="font-size: 20px;">Choose your foot size : </label>
-								<select name="footsize">
-									<option value="">35</option>
-									<option value="">36</option>
-									<option value="">37</option>
-									<option value="">38</option>
-									<option value="">39</option>
-									<option value="">40</option>
-									<option value="">41</option>
-									<option value="">42</option>
-									<option value="">43</option>
-									<option value="">44</option>
-									<option value="">45</option>
-								</select>
-								<br>
-								<a href="size.html" title="check foot size" target="_blank">Check your foot size</a>
-							</form>
-
-							<br>
-								
-							<div>
-								<section class="buttons">
-									<div class="button-container" style="background-color: black; text-align: center;">
-										<a href="" class="btn btn-5">
-											Add to cart
-										</a>
-									</div>
-								</section>
-								
-							</div>
-						</td>
-					</tr>
-
-				</tbody>
-			</table>
-		</div>
-	</main>
+		</main>
+	
+		
+	</div>
 
 	<footer id="footer">
 		
@@ -217,13 +153,5 @@ header("Pragma: no-cache");
 
 		<p id="footer-bottom">&copy; copyright 2017 YourShoes. All Rights Reserved</p>
 	</footer>
-
 </body>
 </html>
-
-
-
-
-
-
-
