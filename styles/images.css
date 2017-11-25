@@ -58,7 +58,7 @@
 }
 .imageSlideShow{
 	position: relative;
-	width: 90%;
+	width: 100%;
 	max-height: 750px;
 }
 .image img{
@@ -114,20 +114,19 @@
 	left: 48%;
 }
 
-
 /* --- Image columns --- */
 .imageCol{
-	box-sizing: border-box;
 	position: relative;
 }
 .image1, .image2, .image3, .image4{
 	max-width: 100%;
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: stretch;
 	background-repeat: no-repeat;
 	margin-right: -6px;
 	width: 25%;
-	height: 1080px;
+	height: 1000px;
 }
 .image1{
 	background-image: url("../img/background/vintas.jpg");
@@ -153,24 +152,25 @@
 
 /* --- Gallery Image --- */
 #titleOfGallery{
-	margin-top: 3%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
-#titleOfGallery span{
-	background-color: gray;
+#titleOfGallery h2{
+	background-color: #ff8533;
+	font-family: sans-serif;
+	color: white;
 	border-radius: 15px;
-	font-size: 40px;
+	font-size: 50px;
 	padding: 10px 20px;
-	font-family: serif;
 }
 .Gallery{
 	position: relative;
 	box-sizing: border-box;
 	margin-top:3%;
 	text-align: center;
-	background-color: #125b63;
+	background-color: #ff8533;
 	padding: 70px 0;
 }
 .imageGallery{
@@ -187,7 +187,7 @@
 }
 .imageGallery:hover img{
 	opacity: 0.4;
-	-webkit-transition: 0.6s ease-in;
+	-webkit-transition: 0.3s ease;
 }
 .imageGallery:hover:after{
 	position: absolute;
@@ -197,17 +197,17 @@
 }
 .imageGallery1:hover:after{
 	content: "New Nike";
-	top : 31%;
+	top : 35%;
 	left: 26%;
 }
 .imageGallery2:hover:after{
 	content: "New Converse";
-	top : 30%;
-	left: 20%;
+	top : 35%;
+	left: 15%;
 }
 .imageGallery3:hover:after{
 	content: "New Adidas";
-	top : 30%;
+	top : 35%;
 	left: 20%;
 }
 /* --- image wrapper --- */
@@ -236,6 +236,7 @@
 	left: 14%;
 	width: 300px;
 	font-weight: 600;
+	font-family: sans-serif;
 	z-index: 100;
 	color: white;
 }
